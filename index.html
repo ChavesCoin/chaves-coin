@@ -3,13 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<img 
-  src="./images/DEE745CB-303D-43E2-B41E-7F24E11BE882.png" 
-  alt="Chaves Coin"
-  class="hero-image"
->
 
-    <title>Chaves COIN</title>
+<title>Chaves COIN</title>
 
 <style>
 body {
@@ -24,21 +19,28 @@ a {
     color: inherit;
 }
 
-    .hero {
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
+/* HERO */
+.hero {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: flex-start;
     text-align: center;
-    padding: 40px 20px;
+    padding: 20px 20px;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    display: block;
+    margin: 0 auto 12px auto;
+    border-radius: 16px;
 }
 
 .hero h1 {
     font-size: 4em;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin: 10px 0 20px;
 }
 
 .hero span {
@@ -81,6 +83,7 @@ a {
     transform: scale(1.05);
 }
 
+/* SECTIONS */
 section {
     max-width: 1100px;
     margin: auto;
@@ -112,6 +115,7 @@ li {
     margin-bottom: 12px;
 }
 
+/* FOOTER */
 footer {
     text-align: center;
     padding: 40px 20px;
@@ -119,16 +123,6 @@ footer {
     font-size: 0.9em;
     opacity: 0.6;
 }
-
-.hero-image {
-  width: 100%;
-  max-width: 360px;
-  height: auto;
-  display: block;
-  margin: 0 auto 6px auto;
-  border-radius: 16px;
-}
-    
 </style>
 </head>
 
@@ -137,7 +131,14 @@ footer {
 <!-- HERO -->
 <div class="hero">
     <div>
+        <img 
+          src="./images/DEE745CB-303D-43E2-B41E-7F24E11BE882.png" 
+          alt="Chaves Coin"
+          class="hero-image"
+        >
+
         <h1><span>CHAVES</span> COIN</h1>
+
         <p>
             A criptomoeda da Vila.  
             Criada por fãs, para fãs.  
