@@ -24,7 +24,6 @@ body {
     background: #0e0e0e;
     color: #ffffff;
 }
-
 a { text-decoration: none; color: inherit; }
 
 /* LANGUAGE SWITCH */
@@ -61,12 +60,12 @@ a { text-decoration: none; color: inherit; }
 .hero span { color: #ffd700; }
 .hero p {
     font-size: 1.25em;
-    max-width: 600px;
+    max-width: 700px;
     margin: auto;
 }
-.buttons {
-    margin-top: 25px;
-}
+
+/* BUTTON */
+.buttons { margin-top: 25px; }
 .btn {
     padding: 14px 30px;
     border-radius: 50px;
@@ -94,6 +93,11 @@ section {
 h2 {
     font-size: 2.3em;
     margin-bottom: 20px;
+}
+p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    opacity: 0.95;
 }
 
 /* SOCIAL */
@@ -178,19 +182,56 @@ footer {
     <button onclick="setLang('en')">EN</button>
 </div>
 
+<!-- HERO -->
 <div class="hero">
     <img src="./images/DEE745CB-303D-43E2-B41E-7F24E11BE882.png">
     <h1><span>CHAVES</span> COIN</h1>
 
-    <p data-lang="pt">A moeda da Vila.<br>Criada por fãs, para fãs.<br>“Foi sem querer querendo.”</p>
-    <p data-lang="en">The coin of the neighborhood.<br>Created by fans, for fans.<br>“It was unintentional… on purpose.”</p>
+    <p data-lang="pt">
+        A moeda da Vila.<br>
+        Criada por fãs, para fãs.<br>
+        “Foi sem querer querendo.”
+    </p>
+
+    <p data-lang="en">
+        The coin of the neighborhood.<br>
+        Created by fans, for fans.<br>
+        “It was unintentional… on purpose.”
+    </p>
 
     <div class="buttons">
         <a class="btn primary" target="_blank"
-           href="https://dexscreener.com/solana/5p9bGqR4WDjENGXDQ9uuz4zawag4k4jQD48mg9hUpump">BUY</a>
+           href="https://dexscreener.com/solana/5p9bGqR4WDjENGXDQ9uuz4zawag4k4jQD48mg9hUpump">
+           BUY
+        </a>
     </div>
 </div>
 
+<!-- ABOUT -->
+<section>
+<div class="section-box">
+<h2 data-lang="pt">Sobre o Projeto</h2>
+<h2 data-lang="en">About the Project</h2>
+
+<p data-lang="pt">
+🌟 <b>Chaves COIN – A Criptomoeda da Vila</b> 🌟<br><br>
+A Chaves COIN nasceu como uma homenagem carinhosa a um dos personagens mais queridos da televisão: o eterno Chaves. Criada por fãs e para fãs, ela representa muito mais do que uma moeda virtual — é um símbolo de nostalgia, alegria e das boas risadas que marcaram gerações.<br><br>
+Inspirada nos valores simples da Vila do Chaves, a Chaves COIN celebra a amizade, a inocência e aquele jeitinho único de transformar pequenos problemas em grandes aprendizados. Afinal, como o próprio Chaves diria: “Foi sem querer querendo!” 😄<br><br>
+Essa criptomoeda não tem como objetivo a ganância, mas sim a diversão, o engajamento da comunidade e o amor por um programa que atravessou décadas, fronteiras e idiomas.<br><br>
+💛 Simples como um sanduíche de presunto, valiosa como a nossa infância.
+</p>
+
+<p data-lang="en">
+🌟 <b>Chaves Coin – The Neighborhood Cryptocurrency</b> 🌟<br><br>
+Chaves Coin was created as a heartfelt tribute to one of the most beloved TV characters of all time. Made by fans, for fans, it represents more than just a digital coin — it is a symbol of nostalgia, joy, and the laughter that shaped generations.<br><br>
+Inspired by the simple values of the neighborhood, Chaves Coin celebrates friendship, innocence, and the unique ability to turn small problems into great lessons. As Chaves would say: “It was unintentional… on purpose!” 😄<br><br>
+This project is not about greed, but about fun, community engagement, and keeping alive the spirit of a show that crossed decades, borders, and languages.<br><br>
+💛 Simple like a ham sandwich, priceless like our childhood.
+</p>
+</div>
+</section>
+
+<!-- COMMUNITY -->
 <section>
 <div class="section-box">
 <h2 data-lang="pt">Comunidade</h2>
@@ -205,6 +246,7 @@ footer {
 </div>
 </section>
 
+<!-- CHART -->
 <section>
 <div class="section-box">
 <h2 data-lang="pt">Gráfico em Tempo Real</h2>
@@ -216,6 +258,7 @@ footer {
 </div>
 </section>
 
+<!-- GALLERY -->
 <section>
 <div class="section-box">
 <h2 data-lang="pt">Galeria / NFTs</h2>
