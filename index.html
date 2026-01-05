@@ -6,6 +6,17 @@
 
 <title>Chaves Coin</title>
 
+<!-- SEO -->
+<meta name="description" content="Chaves Coin is a fan-made crypto project inspired by a legendary TV character. Community-driven, nostalgic and fun.">
+<meta name="keywords" content="Chaves Coin, meme coin solana, fan token, crypto meme">
+<meta name="author" content="Chaves Coin Community">
+
+<meta property="og:title" content="Chaves Coin">
+<meta property="og:description" content="A fan-made crypto project inspired by a legendary TV character.">
+<meta property="og:image" content="https://chavescoin.github.io/images/DEE745CB-303D-43E2-B41E-7F24E11BE882.png">
+<meta property="og:url" content="https://chavescoin.github.io/">
+<meta property="og:type" content="website">
+
 <style>
 body {
     margin: 0;
@@ -14,19 +25,15 @@ body {
     color: #ffffff;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
+a { text-decoration: none; color: inherit; }
 
 /* LANGUAGE SWITCH */
 .lang-switch {
     position: fixed;
-    top: 16px;
-    right: 16px;
+    top: 14px;
+    right: 14px;
     z-index: 999;
 }
-
 .lang-switch button {
     background: #ffd700;
     border: none;
@@ -39,113 +46,117 @@ a {
 
 /* HERO */
 .hero {
-    display: flex;
-    justify-content: center;
     text-align: center;
-    padding: 20px;
+    padding: 30px 20px;
 }
-
-.hero-image {
-    width: 100%;
+.hero img {
     max-width: 360px;
+    width: 100%;
     border-radius: 16px;
-    margin-bottom: 12px;
 }
-
 .hero h1 {
-    font-size: 4em;
-    margin: 10px 0 20px;
+    font-size: 3.8em;
+    margin: 15px 0;
 }
-
-.hero span {
-    color: #ffd700;
-}
-
+.hero span { color: #ffd700; }
 .hero p {
-    font-size: 1.3em;
+    font-size: 1.25em;
     max-width: 600px;
-    margin: 0 auto 30px;
+    margin: auto;
 }
-
 .buttons {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    flex-wrap: wrap;
+    margin-top: 25px;
 }
-
 .btn {
-    padding: 14px 28px;
+    padding: 14px 30px;
     border-radius: 50px;
     font-weight: bold;
     border: 2px solid #ffd700;
+    margin: 8px;
     transition: 0.3s;
 }
-
-.btn.primary {
+.primary {
     background: #ffd700;
     color: #000;
 }
-
-.btn.secondary {
-    color: #ffd700;
-}
-
-.btn:hover {
-    transform: scale(1.05);
-}
+.btn:hover { transform: scale(1.05); }
 
 /* SECTIONS */
 section {
     max-width: 1100px;
     margin: auto;
-    padding: 80px 20px;
+    padding: 70px 20px;
 }
-
 .section-box {
     border-top: 1px solid #333;
-    padding-top: 60px;
+    padding-top: 50px;
 }
-
 h2 {
-    font-size: 2.4em;
+    font-size: 2.3em;
     margin-bottom: 20px;
-}
-
-p {
-    font-size: 1.1em;
-    line-height: 1.7;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    margin-bottom: 12px;
 }
 
 /* SOCIAL */
 .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 14px;
-    flex-wrap: wrap;
-    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    max-width: 600px;
+    margin: 30px auto;
 }
-
 .social {
-    padding: 12px 20px;
-    border-radius: 30px;
+    padding: 14px;
+    border-radius: 16px;
+    text-align: center;
     font-weight: bold;
     color: #fff;
+    transition: 0.3s;
+}
+.social:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(255,215,0,0.25);
+}
+.twitter { background: linear-gradient(135deg,#1DA1F2,#0d8ddb); }
+.telegram { background: linear-gradient(135deg,#2AABEE,#229ED9); }
+.instagram { background: linear-gradient(135deg,#f58529,#dd2a7b,#8134af); }
+.dex { background: linear-gradient(135deg,#1dd75b,#14b84a); }
+
+/* CHART */
+.chart-container {
+    max-width: 1000px;
+    margin: 30px auto;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #333;
+}
+.chart-container iframe {
+    width: 100%;
+    height: 520px;
 }
 
-.twitter { background: #000; }
-.telegram { background: #229ED9; }
-.instagram { background: #E1306C; }
-.dex { background: #1dd75b; }
+/* GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+.nft-card {
+    height: 220px;
+    border-radius: 16px;
+    border: 1px solid #333;
+    background: linear-gradient(135deg,#111,#1c1c1c);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffd700;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.nft-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(255,215,0,0.2);
+}
 
 /* FOOTER */
 footer {
@@ -162,88 +173,64 @@ footer {
 
 <body>
 
-<!-- LANGUAGE BUTTON -->
 <div class="lang-switch">
     <button onclick="setLang('pt')">PT</button>
     <button onclick="setLang('en')">EN</button>
 </div>
 
-<!-- HERO -->
 <div class="hero">
-    <div>
-        <img src="./images/DEE745CB-303D-43E2-B41E-7F24E11BE882.png" class="hero-image">
+    <img src="./images/DEE745CB-303D-43E2-B41E-7F24E11BE882.png">
+    <h1><span>CHAVES</span> COIN</h1>
 
-        <h1><span>CHAVES</span> COIN</h1>
+    <p data-lang="pt">A moeda da Vila.<br>Criada por fãs, para fãs.<br>“Foi sem querer querendo.”</p>
+    <p data-lang="en">The coin of the neighborhood.<br>Created by fans, for fans.<br>“It was unintentional… on purpose.”</p>
 
-        <p data-lang="pt">
-            A moeda da Vila.<br>
-            Criada por fãs, para fãs.<br>
-            “Foi sem querer querendo.”
-        </p>
-
-        <p data-lang="en">
-            The coin of the neighborhood.<br>
-            Created by fans, for fans.<br>
-            “It was unintentional… on purpose.”
-        </p>
-
-        <div class="buttons">
-            <a href="https://dexscreener.com/solana/5p9bGqR4WDjENGXDQ9uuz4zawag4k4jQD48mg9hUpump"
-               target="_blank" class="btn primary">BUY</a>
-        </div>
+    <div class="buttons">
+        <a class="btn primary" target="_blank"
+           href="https://dexscreener.com/solana/5p9bGqR4WDjENGXDQ9uuz4zawag4k4jQD48mg9hUpump">BUY</a>
     </div>
 </div>
 
-<!-- ABOUT -->
-<section>
-<div class="section-box">
-<h2 data-lang="pt">Sobre o Projeto</h2>
-<h2 data-lang="en">About the Project</h2>
-
-<p data-lang="pt">
-Projeto criado por fãs como homenagem a um dos personagens mais queridos da TV.
-</p>
-
-<p data-lang="en">
-Fan-made project as a tribute to one of the most beloved TV characters ever.
-</p>
-</div>
-</section>
-
-<!-- COMMUNITY -->
 <section>
 <div class="section-box">
 <h2 data-lang="pt">Comunidade</h2>
 <h2 data-lang="en">Community</h2>
 
 <div class="social-links">
-    <a href="https://x.com/chaves_coin" target="_blank" class="social twitter">Twitter</a>
-    <a href="https://t.me/CHAVESCOIN" target="_blank" class="social telegram">Telegram</a>
-    <a href="https://instagram.com/chaves_coin" target="_blank" class="social instagram">Instagram</a>
-    <a href="https://dexscreener.com/solana/5p9bGqR4WDjENGXDQ9uuz4zawag4k4jQD48mg9hUpump"
-       target="_blank" class="social dex">DexScreener</a>
+    <a class="social twitter" href="https://x.com/chaves_coin" target="_blank">Twitter / X</a>
+    <a class="social telegram" href="https://t.me/CHAVESCOIN" target="_blank">Telegram</a>
+    <a class="social instagram" href="https://instagram.com/chaves_coin" target="_blank">Instagram</a>
+    <a class="social dex" href="https://dexscreener.com/solana/5p9bGqR4WDjENGXDQ9uuz4zawag4k4jQD48mg9hUpump" target="_blank">DexScreener</a>
 </div>
 </div>
 </section>
 
-<!-- DISCLAIMER -->
 <section>
 <div class="section-box">
-<h2 data-lang="pt">Aviso</h2>
-<h2 data-lang="en">Disclaimer</h2>
+<h2 data-lang="pt">Gráfico em Tempo Real</h2>
+<h2 data-lang="en">Live Chart</h2>
 
-<p data-lang="pt">
-Projeto criado por fãs, sem vínculo oficial. Não é conselho financeiro.
-</p>
+<div class="chart-container">
+<iframe src="https://dexscreener.com/solana/5p9bGqR4WDjENGXDQ9uuz4zawag4k4jQD48mg9hUpump?embed=1&theme=dark"></iframe>
+</div>
+</div>
+</section>
 
-<p data-lang="en">
-Fan-made project with no official affiliation. Not financial advice.
-</p>
+<section>
+<div class="section-box">
+<h2 data-lang="pt">Galeria / NFTs</h2>
+<h2 data-lang="en">Gallery / NFTs</h2>
+
+<div class="gallery">
+    <div class="nft-card">Coming Soon</div>
+    <div class="nft-card">Coming Soon</div>
+    <div class="nft-card">Coming Soon</div>
+</div>
 </div>
 </section>
 
 <footer>
-<p>© 2026 • Chaves Coin • Made by fans</p>
+© 2026 • Chaves Coin • Made by fans
 </footer>
 
 <script>
@@ -256,10 +243,9 @@ function setLang(lang) {
     });
     localStorage.setItem('lang', lang);
 }
-
-const savedLang = localStorage.getItem('lang');
-const browserLang = navigator.language.startsWith('pt') ? 'pt' : 'en';
-setLang(savedLang || browserLang);
+const saved = localStorage.getItem('lang');
+const browser = navigator.language.startsWith('pt') ? 'pt' : 'en';
+setLang(saved || browser);
 </script>
 
 </body>
