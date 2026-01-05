@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Chaves COIN</title>
+<title>Chaves Coin</title>
 
 <style>
 body {
@@ -19,27 +19,41 @@ a {
     color: inherit;
 }
 
+/* LANGUAGE SWITCH */
+.lang-switch {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 999;
+}
+
+.lang-switch button {
+    background: #ffd700;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 6px;
+}
+
 /* HERO */
 .hero {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
     text-align: center;
-    padding: 20px 20px;
+    padding: 20px;
 }
 
 .hero-image {
     width: 100%;
     max-width: 360px;
-    height: auto;
-    display: block;
-    margin: 0 auto 12px auto;
     border-radius: 16px;
+    margin-bottom: 12px;
 }
 
 .hero h1 {
     font-size: 4em;
-    font-weight: bold;
     margin: 10px 0 20px;
 }
 
@@ -51,7 +65,6 @@ a {
     font-size: 1.3em;
     max-width: 600px;
     margin: 0 auto 30px;
-    opacity: 0.9;
 }
 
 .buttons {
@@ -75,7 +88,6 @@ a {
 }
 
 .btn.secondary {
-    background: transparent;
     color: #ffd700;
 }
 
@@ -103,7 +115,6 @@ h2 {
 p {
     font-size: 1.1em;
     line-height: 1.7;
-    opacity: 0.9;
 }
 
 ul {
@@ -115,110 +126,141 @@ li {
     margin-bottom: 12px;
 }
 
+/* SOCIAL */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.social {
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.twitter { background: #000; }
+.telegram { background: #229ED9; }
+.instagram { background: #E1306C; }
+.dex { background: #1dd75b; }
+
 /* FOOTER */
 footer {
     text-align: center;
     padding: 40px 20px;
     border-top: 1px solid #333;
-    font-size: 0.9em;
-    opacity: 0.6;
+    opacity: 0.7;
 }
+
+[data-lang] { display: none; }
+[data-lang].active { display: block; }
 </style>
 </head>
 
 <body>
 
+<!-- LANGUAGE BUTTON -->
+<div class="lang-switch">
+    <button onclick="setLang('pt')">PT</button>
+    <button onclick="setLang('en')">EN</button>
+</div>
+
 <!-- HERO -->
 <div class="hero">
     <div>
-        <img 
-          src="./images/DEE745CB-303D-43E2-B41E-7F24E11BE882.png" 
-          alt="Chaves Coin"
-          class="hero-image"
-        >
+        <img src="./images/DEE745CB-303D-43E2-B41E-7F24E11BE882.png" class="hero-image">
 
         <h1><span>CHAVES</span> COIN</h1>
 
-        <p>
-            A criptomoeda da Vila.  
-            Criada por fãs, para fãs.  
-        
-            <br>“Foi sem querer querendo.”
+        <p data-lang="pt">
+            A moeda da Vila.<br>
+            Criada por fãs, para fãs.<br>
+            “Foi sem querer querendo.”
+        </p>
+
+        <p data-lang="en">
+            The coin of the neighborhood.<br>
+            Created by fans, for fans.<br>
+            “It was unintentional… on purpose.”
         </p>
 
         <div class="buttons">
-            <a href="#sobre" class="btn primary">Conhecer o Projeto</a>
-            <a href="#comunidade" class="btn secondary">Comunidade</a>
+            <a href="https://dexscreener.com/solana/5p9bGqR4WDjENGXDQ9uuz4zawag4k4jQD48mg9hUpump"
+               target="_blank" class="btn primary">BUY</a>
         </div>
     </div>
 </div>
 
-<!-- SOBRE -->
-<section id="sobre">
-    <div class="section-box">
-        <h2>Sobre o Projeto</h2>
-        <p>
-            A <b>Chaves COIN</b> é uma homenagem criativa a um dos personagens mais
-            queridos da televisão. Um projeto feito com carinho, nostalgia
-            e bom humor, inspirado nos valores simples da Vila.
-        </p>
-    </div>
-</section>
-
-<!-- POR QUE -->
+<!-- ABOUT -->
 <section>
-    <div class="section-box">
-        <h2>Por que Chaves COIN?</h2>
-        <p>
-            Porque algumas histórias atravessam gerações.  
-            Porque boas risadas nunca saem de moda.  
-            Porque nem tudo precisa ser levado tão a sério.
-        </p>
-    </div>
+<div class="section-box">
+<h2 data-lang="pt">Sobre o Projeto</h2>
+<h2 data-lang="en">About the Project</h2>
+
+<p data-lang="pt">
+Projeto criado por fãs como homenagem a um dos personagens mais queridos da TV.
+</p>
+
+<p data-lang="en">
+Fan-made project as a tribute to one of the most beloved TV characters ever.
+</p>
+</div>
 </section>
 
-<!-- ROADMAP -->
+<!-- COMMUNITY -->
 <section>
-    <div class="section-box">
-        <h2>Roadmap</h2>
-        <ul>
-            <li>✔ Identidade visual</li>
-            <li>✔ Site oficial</li>
-            <li>🔜 Comunidade</li>
-            <li>🔜 Artes e NFTs comemorativos</li>
-            <li>🔜 Ações para fãs</li>
-        </ul>
-    </div>
+<div class="section-box">
+<h2 data-lang="pt">Comunidade</h2>
+<h2 data-lang="en">Community</h2>
+
+<div class="social-links">
+    <a href="https://x.com/chaves_coin" target="_blank" class="social twitter">Twitter</a>
+    <a href="https://t.me/CHAVESCOIN" target="_blank" class="social telegram">Telegram</a>
+    <a href="https://instagram.com/chaves_coin" target="_blank" class="social instagram">Instagram</a>
+    <a href="https://dexscreener.com/solana/5p9bGqR4WDjENGXDQ9uuz4zawag4k4jQD48mg9hUpump"
+       target="_blank" class="social dex">DexScreener</a>
+</div>
+</div>
 </section>
 
-<!-- COMUNIDADE -->
-<section id="comunidade">
-    <div class="section-box">
-        <h2>Comunidade</h2>
-        <p>
-            A Chaves COIN é para quem cresceu assistindo ao programa
-            e quer levar esse carinho para o mundo digital.
-        </p>
-        <p>
-            Em breve: redes sociais e canais da comunidade.
-        </p>
-    </div>
-</section>
-
-<!-- AVISO -->
+<!-- DISCLAIMER -->
 <section>
-    <div class="section-box">
-        <h2>Aviso Importante</h2>
-        <p>
-            Projeto criado por fãs, sem vínculo oficial com os detentores
-            dos direitos do programa. Não é um investimento financeiro.
-        </p>
-    </div>
+<div class="section-box">
+<h2 data-lang="pt">Aviso</h2>
+<h2 data-lang="en">Disclaimer</h2>
+
+<p data-lang="pt">
+Projeto criado por fãs, sem vínculo oficial. Não é conselho financeiro.
+</p>
+
+<p data-lang="en">
+Fan-made project with no official affiliation. Not financial advice.
+</p>
+</div>
 </section>
 
 <footer>
-    © 2026 • Chaves COIN • Feito por fãs
+<p>© 2026 • Chaves Coin • Made by fans</p>
 </footer>
+
+<script>
+function setLang(lang) {
+    document.querySelectorAll('[data-lang]').forEach(el => {
+        el.classList.remove('active');
+        if (el.getAttribute('data-lang') === lang) {
+            el.classList.add('active');
+        }
+    });
+    localStorage.setItem('lang', lang);
+}
+
+const savedLang = localStorage.getItem('lang');
+const browserLang = navigator.language.startsWith('pt') ? 'pt' : 'en';
+setLang(savedLang || browserLang);
+</script>
 
 </body>
 </html>
