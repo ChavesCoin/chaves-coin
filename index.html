@@ -26,23 +26,6 @@ body {
 }
 a { text-decoration: none; color: inherit; }
 
-/* LANGUAGE SWITCH */
-.lang-switch {
-    position: fixed;
-    top: 14px;
-    right: 14px;
-    z-index: 999;
-}
-.lang-switch button {
-    background: #ffd700;
-    border: none;
-    padding: 8px 14px;
-    border-radius: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-left: 6px;
-}
-
 /* HERO */
 .hero {
     text-align: center;
@@ -169,31 +152,17 @@ footer {
     border-top: 1px solid #333;
     opacity: 0.7;
 }
-
-[data-lang] { display: none; }
-[data-lang].active { display: block; }
 </style>
 </head>
 
 <body>
-
-<div class="lang-switch">
-    <button onclick="setLang('pt')">PT</button>
-    <button onclick="setLang('en')">EN</button>
-</div>
 
 <!-- HERO -->
 <div class="hero">
     <img src="./images/DEE745CB-303D-43E2-B41E-7F24E11BE882.png">
     <h1><span>CHAVES</span> COIN</h1>
 
-    <p data-lang="pt">
-        A moeda da Vila.<br>
-        Criada por fãs, para fãs.<br>
-        “Foi sem querer querendo.”
-    </p>
-
-    <p data-lang="en">
+    <p>
         The coin of the neighborhood.<br>
         Created by fans, for fans.<br>
         “It was unintentional… on purpose.”
@@ -210,21 +179,12 @@ footer {
 <!-- ABOUT -->
 <section>
 <div class="section-box">
-<h2 data-lang="pt">Sobre o Projeto</h2>
-<h2 data-lang="en">About the Project</h2>
+<h2>About the Project</h2>
 
-<p data-lang="pt">
-🌟 <b>Chaves COIN – A Criptomoeda da Vila</b> 🌟<br><br>
-A Chaves COIN nasceu como uma homenagem carinhosa a um dos personagens mais queridos da televisão: o eterno Chaves. Criada por fãs e para fãs, ela representa muito mais do que uma moeda virtual — é um símbolo de nostalgia, alegria e das boas risadas que marcaram gerações.<br><br>
-Inspirada nos valores simples da Vila do Chaves, a Chaves COIN celebra a amizade, a inocência e aquele jeitinho único de transformar pequenos problemas em grandes aprendizados. Afinal, como o próprio Chaves diria: “Foi sem querer querendo!” 😄<br><br>
-Essa criptomoeda não tem como objetivo a ganância, mas sim a diversão, o engajamento da comunidade e o amor por um programa que atravessou décadas, fronteiras e idiomas.<br><br>
-💛 Simples como um sanduíche de presunto, valiosa como a nossa infância.
-</p>
-
-<p data-lang="en">
+<p>
 🌟 <b>Chaves Coin – The Neighborhood Cryptocurrency</b> 🌟<br><br>
 Chaves Coin was created as a heartfelt tribute to one of the most beloved TV characters of all time. Made by fans, for fans, it represents more than just a digital coin — it is a symbol of nostalgia, joy, and the laughter that shaped generations.<br><br>
-Inspired by the simple values of the neighborhood, Chaves Coin celebrates friendship, innocence, and the unique ability to turn small problems into great lessons. As Chaves would say: “It was unintentional… on purpose!” 😄<br><br>
+Inspired by simple values, Chaves Coin celebrates friendship, innocence, and the unique ability to turn small problems into meaningful lessons. As Chaves would say: “It was unintentional… on purpose!” 😄<br><br>
 This project is not about greed, but about fun, community engagement, and keeping alive the spirit of a show that crossed decades, borders, and languages.<br><br>
 💛 Simple like a ham sandwich, priceless like our childhood.
 </p>
@@ -234,8 +194,7 @@ This project is not about greed, but about fun, community engagement, and keepin
 <!-- COMMUNITY -->
 <section>
 <div class="section-box">
-<h2 data-lang="pt">Comunidade</h2>
-<h2 data-lang="en">Community</h2>
+<h2>Community</h2>
 
 <div class="social-links">
     <a class="social twitter" href="https://x.com/chaves_coin" target="_blank">Twitter / X</a>
@@ -249,8 +208,7 @@ This project is not about greed, but about fun, community engagement, and keepin
 <!-- CHART -->
 <section>
 <div class="section-box">
-<h2 data-lang="pt">Gráfico em Tempo Real</h2>
-<h2 data-lang="en">Live Chart</h2>
+<h2>Live Chart</h2>
 
 <div class="chart-container">
 <iframe src="https://dexscreener.com/solana/5p9bGqR4WDjENGXDQ9uuz4zawag4k4jQD48mg9hUpump?embed=1&theme=dark"></iframe>
@@ -261,8 +219,7 @@ This project is not about greed, but about fun, community engagement, and keepin
 <!-- GALLERY -->
 <section>
 <div class="section-box">
-<h2 data-lang="pt">Galeria / NFTs</h2>
-<h2 data-lang="en">Gallery / NFTs</h2>
+<h2>Gallery / NFTs</h2>
 
 <div class="gallery">
     <div class="nft-card">Coming Soon</div>
@@ -275,21 +232,6 @@ This project is not about greed, but about fun, community engagement, and keepin
 <footer>
 © 2026 • Chaves Coin • Made by fans
 </footer>
-
-<script>
-function setLang(lang) {
-    document.querySelectorAll('[data-lang]').forEach(el => {
-        el.classList.remove('active');
-        if (el.getAttribute('data-lang') === lang) {
-            el.classList.add('active');
-        }
-    });
-    localStorage.setItem('lang', lang);
-}
-const saved = localStorage.getItem('lang');
-const browser = navigator.language.startsWith('pt') ? 'pt' : 'en';
-setLang(saved || browser);
-</script>
 
 </body>
 </html>
