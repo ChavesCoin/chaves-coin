@@ -11,6 +11,12 @@
 <meta name="keywords" content="Chaves Coin, meme coin solana, fan token, crypto meme">
 <meta name="author" content="Chaves Coin Community">
 
+<meta property="og:title" content="Chaves Coin">
+<meta property="og:description" content="A fan-made crypto project inspired by a legendary TV character.">
+<meta property="og:image" content="https://chavescoin.github.io/images/DEE745CB-303D-43E2-B41E-7F24E11BE882.png">
+<meta property="og:url" content="https://chavescoin.github.io/">
+<meta property="og:type" content="website">
+
 <style>
 body {
     margin: 0;
@@ -77,6 +83,44 @@ p {
     opacity: 0.95;
 }
 
+/* SOCIAL */
+.social-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    max-width: 600px;
+    margin: 30px auto;
+}
+.social {
+    padding: 14px;
+    border-radius: 16px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    transition: 0.3s;
+}
+.social:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(255,215,0,0.25);
+}
+.twitter { background: linear-gradient(135deg,#1DA1F2,#0d8ddb); }
+.telegram { background: linear-gradient(135deg,#2AABEE,#229ED9); }
+.instagram { background: linear-gradient(135deg,#f58529,#dd2a7b,#8134af); }
+.dex { background: linear-gradient(135deg,#1dd75b,#14b84a); }
+
+/* CHART */
+.chart-container {
+    max-width: 1000px;
+    margin: 30px auto;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #333;
+}
+.chart-container iframe {
+    width: 100%;
+    height: 520px;
+}
+
 /* ROADMAP */
 .roadmap-img {
     width: 100%;
@@ -123,6 +167,30 @@ p {
     color: #ffd700;
 }
 
+/* GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+.nft-card {
+    height: 220px;
+    border-radius: 16px;
+    border: 1px solid #333;
+    background: linear-gradient(135deg,#111,#1c1c1c);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffd700;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.nft-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(255,215,0,0.2);
+}
+
 /* FOOTER */
 footer {
     text-align: center;
@@ -139,12 +207,60 @@ footer {
 <div class="hero">
     <img src="./images/DEE745CB-303D-43E2-B41E-7F24E11BE882.png">
     <h1><span>CHAVES</span> COIN</h1>
+
     <p>
         The coin of the neighborhood.<br>
         Created by fans, for fans.<br>
         “It was unintentional… on purpose.”
     </p>
+
+    <div class="buttons">
+        <a class="btn primary" target="_blank"
+           href="https://dexscreener.com/solana/5p9bGqR4WDjENGXDQ9uuz4zawag4k4jQD48mg9hUpump">
+           BUY
+        </a>
+    </div>
 </div>
+
+<!-- ABOUT -->
+<section>
+<div class="section-box">
+<h2>About the Project</h2>
+
+<p>
+🌟 <b>Chaves Coin – The Neighborhood Cryptocurrency</b> 🌟<br><br>
+Chaves Coin was created as a heartfelt tribute to one of the most beloved TV characters of all time. Made by fans, for fans, it represents more than just a digital coin — it is a symbol of nostalgia, joy, and the laughter that shaped generations.<br><br>
+Inspired by simple values, Chaves Coin celebrates friendship, innocence, and the unique ability to turn small problems into meaningful lessons. As Chaves would say: “It was unintentional… on purpose!” 😄<br><br>
+This project is not about greed, but about fun, community engagement, and keeping alive the spirit of a show that crossed decades, borders, and languages.<br><br>
+💛 Simple like a ham sandwich, priceless like our childhood.
+</p>
+</div>
+</section>
+
+<!-- COMMUNITY -->
+<section>
+<div class="section-box">
+<h2>Community</h2>
+
+<div class="social-links">
+    <a class="social twitter" href="https://x.com/chaves_coin" target="_blank">Twitter / X</a>
+    <a class="social telegram" href="https://t.me/CHAVESCOIN" target="_blank">Telegram</a>
+    <a class="social instagram" href="https://instagram.com/chaves_coin" target="_blank">Instagram</a>
+    <a class="social dex" href="https://dexscreener.com/solana/5p9bGqR4WDjENGXDQ9uuz4zawag4k4jQD48mg9hUpump" target="_blank">DexScreener</a>
+</div>
+</div>
+</section>
+
+<!-- CHART -->
+<section>
+<div class="section-box">
+<h2>Live Chart</h2>
+
+<div class="chart-container">
+<iframe src="https://dexscreener.com/solana/5p9bGqR4WDjENGXDQ9uuz4zawag4k4jQD48mg9hUpump?embed=1&theme=dark"></iframe>
+</div>
+</div>
+</section>
 
 <!-- ROADMAP -->
 <section>
@@ -222,6 +338,19 @@ footer {
 It's not just about money. It's about community, creativity, and helping others. 🚀
 </div>
 
+</div>
+</section>
+
+<!-- GALLERY -->
+<section>
+<div class="section-box">
+<h2>Gallery / NFTs</h2>
+
+<div class="gallery">
+    <div class="nft-card">Coming Soon</div>
+    <div class="nft-card">Coming Soon</div>
+    <div class="nft-card">Coming Soon</div>
+</div>
 </div>
 </section>
 
